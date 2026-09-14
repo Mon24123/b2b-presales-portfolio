@@ -13,7 +13,10 @@
     .artifact-head h3{font-size:20px}
     .cases>.section-head h2{font-size:clamp(25px,2.7vw,34px);letter-spacing:-.02em}
     .case-copy h4{font-size:clamp(24px,2.5vw,31px)}
-    @media(max-width:640px){.cases>.section-head h2{font-size:27px}.case-copy h4{font-size:25px}}
+    .review-note{display:flex;align-items:center;gap:22px;max-width:430px;margin-top:28px;padding-top:24px;border-top:1px solid var(--line)}
+    .review-note strong{font-size:17px}.review-note p{margin-top:4px;color:var(--muted);font-size:14px}
+    .review-thumb{flex:0 0 110px;padding:0;border:1px solid var(--line);background:white;cursor:zoom-in}.review-thumb img{width:100%;height:auto}
+    @media(max-width:640px){.cases>.section-head h2{font-size:27px}.case-copy h4{font-size:25px}.review-note{align-items:flex-start;gap:18px}.review-thumb{flex-basis:96px}}
   </style>
   <script src="app.js?v=1" defer></script>
 </head>
@@ -21,7 +24,7 @@
   <a class="skip" href="#main">跳到正文</a>
   <header class="site-header wrap">
     <a class="brand" href="#top"><strong>毛雨晴</strong><span>售前解决方案作品集</span></a>
-    <nav aria-label="页面导航"><a href="#carbon">碳循花园</a><a href="#cases">其他项目</a><a href="#experience">相关经历</a></nav>
+    <nav aria-label="页面导航"><a href="#experience">相关经历</a><a href="#carbon">碳循花园</a><a href="#cases">其他项目</a></nav>
   </header>
 
   <main id="main">
@@ -30,7 +33,7 @@
         <p class="eyebrow">PRE-SALES · SOLUTION</p>
         <h1>把客户的问题，整理成一套能讨论的方案。</h1>
         <p>我希望从售前解决方案做起。过去的项目让我反复练习一件事：先问清真实需求，再组织不同角色收敛方向，把复杂内容整理成演示原型和客户能讨论的方案。</p>
-        <a class="primary" href="#carbon">看重点方案 <span aria-hidden="true">↓</span></a>
+        <a class="primary" href="#experience">先看业务经历 <span aria-hidden="true">↓</span></a>
       </div>
       <figure class="hero-visual">
         <img src="assets/carbon-hero.png" alt="碳循花园再生塑料自浇水花盆方案">
@@ -38,9 +41,20 @@
       </figure>
     </section>
 
+    <section class="experience section" id="experience">
+      <div class="wrap experience-layout">
+        <header class="section-head"><p class="eyebrow">01 / EXPERIENCE</p><h2>先看我在真实业务里做过什么。</h2></header>
+        <div class="experience-list">
+          <article><time>2025.04 — 2026.04</time><div><h3>浙才私域销售实习生</h3><p>累计成交 180 名付费学员，贡献 70 万元以上营收。通过需求追问、产品讲解和异议处理推进成交。</p></div></article>
+          <article><time>2026.05 — 2026.08</time><div><h3>智谱 AI 数据实习生</h3><p>评估大模型真实问答，归纳典型 Bad Case，并提交可以复核的结构化反馈。</p></div></article>
+          <article><time>2024.05 — 2024.07</time><div><h3>第贰大学市场实习生</h3><p>参与职业认知课程的宣传、咨询与销售，招募 6 名学员，创收 1.9K 元。</p></div></article>
+        </div>
+      </div>
+    </section>
+
     <section class="carbon section wrap" id="carbon">
       <header class="section-head carbon-head">
-        <div><p class="eyebrow">01 / CARBON GARDEN</p><h2>碳循花园</h2></div>
+        <div><p class="eyebrow">02 / CARBON GARDEN</p><h2>碳循花园</h2></div>
         <p>把普通的再生塑料花盆，收敛成一套能被用户理解、能在现场展示的产品方案。</p>
       </header>
 
@@ -70,13 +84,10 @@
         <div><span class="result-label">我的角色</span><h3>项目统筹与方案把关</h3><p>主导方向确认，并负责数字体验需求与验收</p></div>
       </div>
       <p class="boundary"><strong>方案边界：</strong>现阶段完成概念方案、路演材料与前端演示原型。材料比例、长期补水效果和真实付费仍需通过供应商与实物测试验证。</p>
-    </section>
-
-    <section class="review section">
-      <div class="wrap review-layout">
-        <div class="review-copy"><p class="eyebrow">02 / REVIEW</p><h2>项目结束后，我写了近 8000 字复盘。</h2><p>复盘记录了方案为什么改变、团队怎样分工，以及哪些内容仍然没有验证。它也让我把一次比赛经历整理成以后能复用的判断。</p><button class="text-button" type="button" data-lightbox-src="assets/carbon-review.png" data-lightbox-title="碳循项目复盘：7858 字，16 页">查看复盘截图</button></div>
-        <button class="review-image" type="button" data-lightbox-src="assets/carbon-review.png" data-lightbox-title="碳循项目复盘：7858 字，16 页"><img src="assets/carbon-review.png" alt="碳循项目复盘文档目录与 7858 字统计"></button>
-      </div>
+      <aside class="review-note">
+        <button class="review-thumb" type="button" data-lightbox-src="assets/carbon-review.png" data-lightbox-title="碳循项目复盘：7858 字，16 页"><img src="assets/carbon-review.png" alt="碳循项目复盘目录与字数统计"></button>
+        <div><strong>项目复盘 · 7858 字</strong><p>记录方案转向、团队分工和待验证问题。</p></div>
+      </aside>
     </section>
 
     <section class="cases section wrap" id="cases">
@@ -91,18 +102,7 @@
       </article>
     </section>
 
-    <section class="experience section" id="experience">
-      <div class="wrap experience-layout">
-        <header class="section-head"><p class="eyebrow">04 / EXPERIENCE</p><h2>我也长期接触真实用户和产品反馈。</h2></header>
-        <div class="experience-list">
-          <article><time>2026.05 — 2026.08</time><div><h3>智谱 AI 数据实习生</h3><p>评估大模型真实问答，归纳典型 Bad Case，并提交可以复核的结构化反馈。</p></div></article>
-          <article><time>2025.04 — 2026.04</time><div><h3>浙才私域销售实习生</h3><p>累计贡献 70 万元以上营收，服务 180 名付费学员。长期处理价格、竞品与退款等真实异议。</p></div></article>
-          <article><time>2024.05 — 2024.07</time><div><h3>第贰大学市场实习生</h3><p>参与职业认知课程的宣传、咨询与销售，招募 6 名学员，创收 1.9K 元。</p></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact section" id="contact"><div class="wrap contact-layout"><div><p class="eyebrow">05 / CONTACT</p><h2>如果岗位需要把客户需求变成清楚的方案，可以聊聊。</h2></div><div><a href="mailto:maoyuqing2027@163.com">maoyuqing2027@163.com</a><p>南京工业职业技术大学<br>自动化技术与应用 · 本科<br>CET-4 577 / CET-6 472</p></div></div></section>
+    <section class="contact section" id="contact"><div class="wrap contact-layout"><div><p class="eyebrow">04 / CONTACT</p><h2>如果岗位需要把客户需求变成清楚的方案，可以聊聊。</h2></div><div><a href="mailto:maoyuqing2027@163.com">maoyuqing2027@163.com</a><p>南京工业职业技术大学<br>自动化技术与应用 · 本科<br>CET-4 577 / CET-6 472</p></div></div></section>
   </main>
   <footer class="wrap"><span>毛雨晴 · 售前解决方案作品集</span><a href="#top">回到顶部 ↑</a></footer>
 
