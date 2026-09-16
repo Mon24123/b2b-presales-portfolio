@@ -14,12 +14,19 @@
     .cases>.section-head h2{font-size:clamp(25px,2.7vw,34px);letter-spacing:-.02em}
     .case-copy h4{font-size:clamp(24px,2.5vw,31px)}
     .hero{min-height:560px}.hero h1{font-size:clamp(32px,3.4vw,43px);letter-spacing:-.025em}
+    .solution-flow{display:grid;gap:28px;margin-top:46px}
+    .solution-step{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr);gap:46px;align-items:center;padding:28px;border:1px solid var(--line);background:white}
+    .solution-step.reverse{grid-template-columns:minmax(280px,.75fr) minmax(0,1.25fr)}
+    .solution-step button{padding:0;border:0;background:transparent;cursor:zoom-in}.solution-step img{width:100%;height:auto}
+    .solution-copy .step-no{font:750 12px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--teal)}
+    .solution-copy h3{margin:12px 0 12px;font-size:clamp(24px,2.5vw,32px);line-height:1.3}.solution-copy p{color:var(--muted)}
     .carbon-closing{display:grid;grid-template-columns:minmax(0,1fr) 230px;gap:44px;align-items:start;margin-top:54px}
-    .carbon-closing .result-row{margin-top:0}.carbon-closing .boundary{margin-bottom:0}
+    .carbon-closing .result-row{grid-template-columns:1fr;margin-top:0;border-block:0}.carbon-closing .result-row>div{border-left:0;border-top:1px solid var(--line);padding:22px 0}.carbon-closing .result-row>div:last-child{border-bottom:1px solid var(--line)}
     .review-proof{padding:9px;border:1px solid var(--line);background:white;color:var(--ink);text-align:left;cursor:zoom-in;transform:rotate(1.2deg);box-shadow:0 18px 42px rgba(16,45,63,.14)}
     .review-proof img{width:100%;height:auto}.review-proof span{display:block;padding:9px 3px 2px;font-size:13px;font-weight:750}
+    .cases>.section-head h2{font-size:clamp(34px,4.5vw,54px);letter-spacing:-.035em}
     @media(max-width:900px){.carbon-closing{grid-template-columns:minmax(0,1fr) 200px;gap:30px}}
-    @media(max-width:640px){.cases>.section-head h2{font-size:27px}.case-copy h4{font-size:25px}.hero{min-height:0}.hero h1{font-size:34px}.carbon-closing{grid-template-columns:1fr;margin-top:38px}.review-proof{width:min(64vw,220px);margin:2px auto 0;transform:rotate(.7deg)}}
+    @media(max-width:640px){.cases>.section-head h2{font-size:34px}.case-copy h4{font-size:25px}.hero{min-height:0}.hero h1{font-size:34px}.solution-step,.solution-step.reverse{grid-template-columns:1fr;gap:22px;padding:14px}.solution-step.reverse .solution-copy{order:0}.carbon-closing{grid-template-columns:1fr;margin-top:38px}.review-proof{width:min(64vw,220px);margin:2px auto 0;transform:rotate(.7deg)}}
   </style>
   <script src="app.js?v=1" defer></script>
 </head>
@@ -61,24 +68,19 @@
         <p>再生塑料自浇水花盆，配套植物养护与回收入口。</p>
       </header>
 
-      <div class="carbon-story">
-        <div class="story-copy">
-          <h3>原方案无法落地后，我推动团队改做自浇水花盆</h3>
-          <p>我最初以个人方案“静屿”通过初选并发起组队。组队后，原方案的材料和制作难度超过现场条件。我召集团队比较材料、制作时间和现场条件，最终把队友提出的普通花盆改成带可视水仓和毛细导水结构的自浇水花盆。</p>
-        </div>
-        <ol class="decision-list">
-          <li><span>01</span><div><strong>问题</strong><p>养花的人会忘记浇水，也难判断水量，出差时更容易中断养护。</p></div></li>
-          <li><span>02</span><div><strong>实体方案</strong><p>采用可视水仓和毛细导水结构，强调无电、可拆洗，并规划可替换部件。</p></div></li>
-          <li><span>03</span><div><strong>数字服务</strong><p>扫码后提供植物养护、图鉴、社区与回收入口，让服务从售出花盆之后继续。</p></div></li>
-          <li><span>04</span><div><strong>验证路径</strong><p>先做实物和小范围试用，再判断是否投入企业礼赠、校园定制与品牌合作。</p></div></li>
-        </ol>
-      </div>
-
-      <div class="artifact-head"><h3>从用户问题到产品结构</h3></div>
-      <div class="artifact-grid">
-        <button class="artifact" type="button" data-lightbox-src="assets/carbon-need.png" data-lightbox-title="用户问题：养花不该成为新的负担"><img src="assets/carbon-need.png" alt="碳循花园用户需求页面"><span><strong>用户问题</strong><small>为什么需要这套方案</small></span></button>
-        <button class="artifact" type="button" data-lightbox-src="assets/carbon-structure.png" data-lightbox-title="产品结构：可视水仓与毛细导水"><img src="assets/carbon-structure.png" alt="碳循花园产品结构页面"><span><strong>产品结构</strong><small>方案如何工作</small></span></button>
-        <button class="artifact" type="button" data-lightbox-src="assets/carbon-digital.png" data-lightbox-title="数字服务：花盆售出以后，服务才刚开始"><img src="assets/carbon-digital.png" alt="碳循花园数字服务页面"><span><strong>数字服务</strong><small>实体产品如何连接后续服务</small></span></button>
+      <div class="solution-flow">
+        <article class="solution-step">
+          <button type="button" data-lightbox-src="assets/carbon-need.png" data-lightbox-title="用户问题：养花不该成为新的负担"><img src="assets/carbon-need.png" alt="碳循花园用户需求页面"></button>
+          <div class="solution-copy"><p class="step-no">01 / USER PROBLEM</p><h3>想养花，也要允许偶尔忘记。</h3><p>可视水仓让用户直接看到剩余水量，自浇水结构减少忘记浇水和短期出差带来的影响。</p></div>
+        </article>
+        <article class="solution-step reverse">
+          <div class="solution-copy"><p class="step-no">02 / PRODUCT</p><h3>水仓看得见，供水不用电。</h3><p>花盆通过毛细导水补水，结构可以拆开清洗，耗损部件可以单独替换。</p></div>
+          <button type="button" data-lightbox-src="assets/carbon-structure.png" data-lightbox-title="产品结构：可视水仓与毛细导水"><img src="assets/carbon-structure.png" alt="碳循花园产品结构页面"></button>
+        </article>
+        <article class="solution-step">
+          <button type="button" data-lightbox-src="assets/carbon-digital.png" data-lightbox-title="数字服务：花盆售出以后，服务才刚开始"><img src="assets/carbon-digital.png" alt="碳循花园数字服务页面"></button>
+          <div class="solution-copy"><p class="step-no">03 / DIGITAL SERVICE</p><h3>花盆售出后，养护服务继续。</h3><p>扫码进入植物图鉴、养护提醒与回收入口，实体产品由此连接后续服务。</p></div>
+        </article>
       </div>
 
       <div class="carbon-closing">
@@ -88,14 +90,13 @@
             <div><span class="result-label">现场</span><h3>约 50 人体验</h3><p>数字原型获得积极反馈</p></div>
             <div><span class="result-label">我的角色</span><h3>推动转向并负责数字体验</h3><p>梳理需求，验收网页与路演材料</p></div>
           </div>
-          <p class="boundary"><strong>方案边界：</strong>现阶段完成概念方案、路演材料与前端演示原型。材料比例、长期补水效果和真实付费仍需通过供应商与实物测试验证。</p>
         </div>
         <button class="review-proof" type="button" data-lightbox-src="assets/carbon-review.png" data-lightbox-title="碳循项目复盘：7858 字，16 页"><img src="assets/carbon-review.png" alt="碳循项目复盘目录，底部显示共 7858 字"><span>项目复盘 · 7858 字 / 16 页</span></button>
       </div>
     </section>
 
     <section class="cases section wrap" id="cases">
-      <header class="section-head"><p class="eyebrow">03 / OTHER PROJECTS</p><h2>无障碍出行与线下社交</h2></header>
+      <header class="section-head"><p class="eyebrow">03</p><h2>OTHER PROJECTS</h2></header>
       <article class="case">
         <div class="case-copy"><p class="case-no">CASE 02</p><h3>路见</h3><h4>让盲人不再因为害怕障碍而不敢出门。</h4><p>方案从语音识别障碍扩展到出行端、家属端和治理端。出行者获得实时提醒，家属了解行程，治理人员承接事件处置。</p><dl><div><dt>方案重点</dt><dd>三端协同与异常处理</dd></div><div><dt>结果</dt><dd>全国总决赛第一名</dd></div><div><dt>机构</dt><dd>毕马威 × 益优青年 × 中国妇女发展基金会</dd></div></dl></div>
         <div class="lujian-visual"><img src="assets/lujian-trip.jpg" alt="路见出行端"><img src="assets/lujian-family.jpg" alt="路见家属端"><img src="assets/lujian-governance.jpg" alt="路见治理端"></div>
