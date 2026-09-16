@@ -13,10 +13,13 @@
     .artifact-head h3{font-size:20px}
     .cases>.section-head h2{font-size:clamp(25px,2.7vw,34px);letter-spacing:-.02em}
     .case-copy h4{font-size:clamp(24px,2.5vw,31px)}
-    .review-note{display:flex;align-items:center;gap:22px;max-width:430px;margin-top:28px;padding-top:24px;border-top:1px solid var(--line)}
-    .review-note strong{font-size:17px}.review-note p{margin-top:4px;color:var(--muted);font-size:14px}
-    .review-thumb{flex:0 0 110px;padding:0;border:1px solid var(--line);background:white;cursor:zoom-in}.review-thumb img{width:100%;height:auto}
-    @media(max-width:640px){.cases>.section-head h2{font-size:27px}.case-copy h4{font-size:25px}.review-note{align-items:flex-start;gap:18px}.review-thumb{flex-basis:96px}}
+    .hero{min-height:560px}.hero h1{font-size:clamp(32px,3.4vw,43px);letter-spacing:-.025em}
+    .carbon-closing{display:grid;grid-template-columns:minmax(0,1fr) 230px;gap:44px;align-items:start;margin-top:54px}
+    .carbon-closing .result-row{margin-top:0}.carbon-closing .boundary{margin-bottom:0}
+    .review-proof{padding:9px;border:1px solid var(--line);background:white;color:var(--ink);text-align:left;cursor:zoom-in;transform:rotate(1.2deg);box-shadow:0 18px 42px rgba(16,45,63,.14)}
+    .review-proof img{width:100%;height:auto}.review-proof span{display:block;padding:9px 3px 2px;font-size:13px;font-weight:750}
+    @media(max-width:900px){.carbon-closing{grid-template-columns:minmax(0,1fr) 200px;gap:30px}}
+    @media(max-width:640px){.cases>.section-head h2{font-size:27px}.case-copy h4{font-size:25px}.hero{min-height:0}.hero h1{font-size:34px}.carbon-closing{grid-template-columns:1fr;margin-top:38px}.review-proof{width:min(64vw,220px);margin:2px auto 0;transform:rotate(.7deg)}}
   </style>
   <script src="app.js?v=1" defer></script>
 </head>
@@ -30,10 +33,10 @@
   <main id="main">
     <section class="hero wrap" id="top">
       <div class="hero-copy">
-        <p class="eyebrow">PRE-SALES · SOLUTION</p>
-        <h1>把客户的问题，整理成一套能讨论的方案。</h1>
-        <p>我希望从售前解决方案做起。过去的项目让我反复练习一件事：先问清真实需求，再组织不同角色收敛方向，把复杂内容整理成演示原型和客户能讨论的方案。</p>
-        <a class="primary" href="#experience">先看业务经历 <span aria-hidden="true">↓</span></a>
+        <p class="eyebrow">MAO YUQING · PORTFOLIO</p>
+        <h1>售前解决方案方向</h1>
+        <p>我曾在私域销售中贡献 70 万元以上营收，也负责过“碳循花园”等项目的方案设计与路演交付。</p>
+        <a class="primary" href="#experience">查看业务经历 <span aria-hidden="true">↓</span></a>
       </div>
       <figure class="hero-visual">
         <img src="assets/carbon-hero.png" alt="碳循花园再生塑料自浇水花盆方案">
@@ -43,7 +46,7 @@
 
     <section class="experience section" id="experience">
       <div class="wrap experience-layout">
-        <header class="section-head"><p class="eyebrow">01 / EXPERIENCE</p><h2>先看我在真实业务里做过什么。</h2></header>
+        <header class="section-head"><p class="eyebrow">01 / EXPERIENCE</p><h2>真实业务经历</h2></header>
         <div class="experience-list">
           <article><time>2025.04 — 2026.04</time><div><h3>浙才私域销售实习生</h3><p>累计成交 180 名付费学员，贡献 70 万元以上营收。通过需求追问、产品讲解和异议处理推进成交。</p></div></article>
           <article><time>2026.05 — 2026.08</time><div><h3>智谱 AI 数据实习生</h3><p>评估大模型真实问答，归纳典型 Bad Case，并提交可以复核的结构化反馈。</p></div></article>
@@ -55,13 +58,13 @@
     <section class="carbon section wrap" id="carbon">
       <header class="section-head carbon-head">
         <div><p class="eyebrow">02 / CARBON GARDEN</p><h2>碳循花园</h2></div>
-        <p>把普通的再生塑料花盆，收敛成一套能被用户理解、能在现场展示的产品方案。</p>
+        <p>再生塑料自浇水花盆，配套植物养护与回收入口。</p>
       </header>
 
       <div class="carbon-story">
         <div class="story-copy">
-          <h3>四天里，先把方向定下来</h3>
-          <p>我最初以个人方案“静屿”通过初选并发起组队。组队后，原方案的材料和制作难度超过现场条件。我没有继续守着自己的入选方案，而是主导团队重新确认方向，把队友提出的普通花盆升级为再生塑料自浇水花盆。</p>
+          <h3>原方案无法落地后，我推动团队改做自浇水花盆</h3>
+          <p>我最初以个人方案“静屿”通过初选并发起组队。组队后，原方案的材料和制作难度超过现场条件。我召集团队比较材料、制作时间和现场条件，最终把队友提出的普通花盆改成带可视水仓和毛细导水结构的自浇水花盆。</p>
         </div>
         <ol class="decision-list">
           <li><span>01</span><div><strong>问题</strong><p>养花的人会忘记浇水，也难判断水量，出差时更容易中断养护。</p></div></li>
@@ -71,27 +74,28 @@
         </ol>
       </div>
 
-      <div class="artifact-head"><h3>方案怎么落到产品上</h3></div>
+      <div class="artifact-head"><h3>从用户问题到产品结构</h3></div>
       <div class="artifact-grid">
         <button class="artifact" type="button" data-lightbox-src="assets/carbon-need.png" data-lightbox-title="用户问题：养花不该成为新的负担"><img src="assets/carbon-need.png" alt="碳循花园用户需求页面"><span><strong>用户问题</strong><small>为什么需要这套方案</small></span></button>
         <button class="artifact" type="button" data-lightbox-src="assets/carbon-structure.png" data-lightbox-title="产品结构：可视水仓与毛细导水"><img src="assets/carbon-structure.png" alt="碳循花园产品结构页面"><span><strong>产品结构</strong><small>方案如何工作</small></span></button>
         <button class="artifact" type="button" data-lightbox-src="assets/carbon-digital.png" data-lightbox-title="数字服务：花盆售出以后，服务才刚开始"><img src="assets/carbon-digital.png" alt="碳循花园数字服务页面"><span><strong>数字服务</strong><small>实体产品如何连接后续服务</small></span></button>
       </div>
 
-      <div class="result-row">
-        <div><span class="result-label">结果</span><h3>绿色行动者奖</h3><p>陶氏化学 × 启创空间</p></div>
-        <div><span class="result-label">现场</span><h3>约 50 人体验</h3><p>数字原型获得积极反馈</p></div>
-        <div><span class="result-label">我的角色</span><h3>项目统筹与方案把关</h3><p>主导方向确认，并负责数字体验需求与验收</p></div>
+      <div class="carbon-closing">
+        <div>
+          <div class="result-row">
+            <div><span class="result-label">结果</span><h3>绿色行动者奖</h3><p>陶氏化学 × 启创空间</p></div>
+            <div><span class="result-label">现场</span><h3>约 50 人体验</h3><p>数字原型获得积极反馈</p></div>
+            <div><span class="result-label">我的角色</span><h3>推动转向并负责数字体验</h3><p>梳理需求，验收网页与路演材料</p></div>
+          </div>
+          <p class="boundary"><strong>方案边界：</strong>现阶段完成概念方案、路演材料与前端演示原型。材料比例、长期补水效果和真实付费仍需通过供应商与实物测试验证。</p>
+        </div>
+        <button class="review-proof" type="button" data-lightbox-src="assets/carbon-review.png" data-lightbox-title="碳循项目复盘：7858 字，16 页"><img src="assets/carbon-review.png" alt="碳循项目复盘目录，底部显示共 7858 字"><span>项目复盘 · 7858 字 / 16 页</span></button>
       </div>
-      <p class="boundary"><strong>方案边界：</strong>现阶段完成概念方案、路演材料与前端演示原型。材料比例、长期补水效果和真实付费仍需通过供应商与实物测试验证。</p>
-      <aside class="review-note">
-        <button class="review-thumb" type="button" data-lightbox-src="assets/carbon-review.png" data-lightbox-title="碳循项目复盘：7858 字，16 页"><img src="assets/carbon-review.png" alt="碳循项目复盘目录与字数统计"></button>
-        <div><strong>项目复盘 · 7858 字</strong><p>记录方案转向、团队分工和待验证问题。</p></div>
-      </aside>
     </section>
 
     <section class="cases section wrap" id="cases">
-      <header class="section-head"><p class="eyebrow">03 / OTHER PROJECTS</p><h2>另外两个做成原型的项目</h2></header>
+      <header class="section-head"><p class="eyebrow">03 / OTHER PROJECTS</p><h2>无障碍出行与线下社交</h2></header>
       <article class="case">
         <div class="case-copy"><p class="case-no">CASE 02</p><h3>路见</h3><h4>让盲人不再因为害怕障碍而不敢出门。</h4><p>方案从语音识别障碍扩展到出行端、家属端和治理端。出行者获得实时提醒，家属了解行程，治理人员承接事件处置。</p><dl><div><dt>方案重点</dt><dd>三端协同与异常处理</dd></div><div><dt>结果</dt><dd>全国总决赛第一名</dd></div><div><dt>机构</dt><dd>毕马威 × 益优青年 × 中国妇女发展基金会</dd></div></dl></div>
         <div class="lujian-visual"><img src="assets/lujian-trip.jpg" alt="路见出行端"><img src="assets/lujian-family.jpg" alt="路见家属端"><img src="assets/lujian-governance.jpg" alt="路见治理端"></div>
@@ -102,7 +106,7 @@
       </article>
     </section>
 
-    <section class="contact section" id="contact"><div class="wrap contact-layout"><div><p class="eyebrow">04 / CONTACT</p><h2>如果岗位需要把客户需求变成清楚的方案，可以聊聊。</h2></div><div><a href="mailto:maoyuqing2027@163.com">maoyuqing2027@163.com</a><p>南京工业职业技术大学<br>自动化技术与应用 · 本科<br>CET-4 577 / CET-6 472</p></div></div></section>
+    <section class="contact section" id="contact"><div class="wrap contact-layout"><div><p class="eyebrow">04 / CONTACT</p><h2>联系我</h2></div><div><a href="mailto:maoyuqing2027@163.com">maoyuqing2027@163.com</a><p>南京工业职业技术大学<br>自动化技术与应用 · 本科<br>CET-4 577 / CET-6 472</p></div></div></section>
   </main>
   <footer class="wrap"><span>毛雨晴 · 售前解决方案作品集</span><a href="#top">回到顶部 ↑</a></footer>
 
